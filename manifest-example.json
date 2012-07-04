@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "EXTENSION",
+  "description": "EXTENSION DESCRIPTION",
+  "permissions": ["contextMenus"],
+  "web_accessible_resources": [
+    "settings.js",
+    "cmsearch/sitesearch.js",
+    "cmsearch/options.js"
+  ],
+  "background": {
+    "scripts": ["settings.js", "cmsearch/sitesearch.js"]
+  },
+  "options_page": "options.html",
+  "icons" : {
+    "16" : "EXTENSION-16.png",
+    "48" : "EXTENSION-48.png",
+    "128" : "EXTENSION-128.png"
+  }
+}
