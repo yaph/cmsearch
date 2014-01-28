@@ -19,7 +19,6 @@ function saveOptions() {
         if (chk.checked)
             selected.push(chk.value);
     });
-
     localStorage[cache_id] = selected;
     Sitesearch.reloadContextMenu();
 
@@ -41,7 +40,7 @@ function createOption(url) {
 function showOptions() {
     Sitesearch.init();
     var options = Sitesearch.cycle(createOption);
-    document.getElementById('urls').innerHTML = '<form><ul>' + options.join('') + '</ul></form>';
+    document.getElementById('urls').innerHTML = '<form><ul class="list-unstyled">' + options.join('') + '</ul></form>';
     document.title = title;
     document.getElementById('title').innerHTML = title;
     document.getElementById('heading').innerHTML = heading;

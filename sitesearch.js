@@ -13,7 +13,7 @@ var Sitesearch = {
         }
     },
     search: function(info, tab) {
-        chrome.tabs.create({'url': Sitesearch.urlMap[info.menuItemId].replace('#SEARCH#', info.selectionText)});
+        chrome.tabs.create({'url': Sitesearch.urlMap[info.menuItemId].replace('#SEARCH#', encodeURIComponent(info.selectionText))});
     },
     cycle: function(callback) {
         var len = sites.length;
