@@ -46,8 +46,9 @@ var Sitesearch = {
         }
     },
     reloadContextMenu: function() {
-        var bg = chrome.extension.getBackgroundPage();
-        chrome.contextMenus.removeAll(function(){bg.createContextMenu();});
+        chrome.contextMenus.removeAll(function(){
+            Sitesearch.createContextMenu();
+        });
     }
 };
 

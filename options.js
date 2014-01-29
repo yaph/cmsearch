@@ -20,6 +20,7 @@ function saveOptions() {
             selected.push(chk.value);
     });
     localStorage[cache_id] = selected;
+    Sitesearch.selected = selected;
     Sitesearch.reloadContextMenu();
 
     // Update status to let user know options were saved.
